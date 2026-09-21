@@ -5,7 +5,7 @@ import joblib
 import numpy as np
 
 # Load the trained model and preprocessor (if any)
-model = joblib.load('tourism_project/deployment/logistic_regression_model.joblib')
+model = joblib.load('logistic_regression_model.joblib')
 
 # Define the expected feature columns from training (excluding 'ProdTaken')
 # This list must match the columns after one-hot encoding during training
