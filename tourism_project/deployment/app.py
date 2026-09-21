@@ -5,8 +5,11 @@ import joblib
 import numpy as np
 
 # Load the trained model and preprocessor (if any)
-model = joblib.load('logistic_regression_model.joblib')
-
+# Load the trained model and preprocessor (if any)
+import os
+current_dir = os.path.dirname(os.path.abspath(__file__))
+model_path = os.path.join(current_dir, 'logistic_regression_model.joblib')
+model = joblib.load(model_path)
 # Define the expected feature columns from training (excluding 'ProdTaken')
 # This list must match the columns after one-hot encoding during training
 expected_columns = [
